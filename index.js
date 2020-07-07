@@ -1,80 +1,82 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
 
+
+let answers;
 const writeFileAsync = util.promisify(fs.writeFile);
+const readTemplate = util.promisify(fs.readFile);
+
 
 function promptUser() {
   return inquirer.prompt([
     {
       type: "input",
-      name: "name",
-      message: "What is your name?"
+      name: "title",
+      message: "What is your projects title :"
     },
     {
       type: "input",
-      name: "location",
-      message: "Where are you from?"
+      name: "icon",
+      message: "Project Icon address : "
     },
-    {
-      type: "input",
-      name: "hobby",
-      message: "What is your favorite hobby?"
-    },
-    {
-      type: "input",
-      name: "food",
-      message: "What is your favorite food?"
-    },
-    {
-      type: "input",
-      name: "github",
-      message: "Enter your GitHub Username"
-    },
-    {
-      type: "input",
-      name: "linkedin",
-      message: "Enter your LinkedIn URL."
-    }
+   {
+    type: "input",
+    name: "repo",
+    message: "Repo Address :"
+   }
+   ,
+   {
+    type: "input",
+    name: "purpose",
+    message: "Project Purpose :"
+   }
+
   ]);
 }
 
-function generateHTML(answers) {
-  return `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
+async function processString(theString) {
+
+  let rplString = [["<answers.title>", answers.title],["<answers.license>", answers.license]];
+  console.log(rplString);
+ let theModifiedString = theString.toString().replace("<answers.title>", answers.title);
+  return(theModifiedString);
+
 }
 
+
 async function init() {
-  console.log("hi")
+
   try {
-    const answers = await promptUser();
+    answers = await promptUser();
+    const getTemplate = await readTemplate("./templates/tmp.txt", answers);
+   // let res = await processString(getTemplate);
+     
+     let rplString = [["<title>", answers.title, "GitHub Project"],
+     ["<projectIcon>", answers.icon, "https://i.imgur.com/6wj0hh6.jpg"],
+     ["<repo>", answers.repo, ""],
+     ["<purpose>", answers.purpose, "The purpose of this project is to : <enter reason here>"]
+    ];
+  
+      theModifiedString = getTemplate.toString();
 
-    const html = await generateHTML(answers);
+    for (i = 0; i < rplString.length; i ++) {
+        console.log("Writing" + rplString[i][0]);
+        // see if user has entered data - if not default to array 2
+        if (rplString[i][1] == "") {
+            if (rplString[i][2] == "") {
+              console.log("Error - missing information for field " + rplString[i][1]);
+              continue;
 
-    await writeFileAsync("index.html", html);
+                }
+            thisString = rplString[i][2]} else {thisString = rplString[i][1];}
+         theModifiedString = theModifiedString.replace(rplString[i][0], thisString);
 
-    console.log("Successfully wrote to index.html");
+    }
+    
+      await writeFileAsync("./generated_content/README.md",theModifiedString);
+      console.log("Successfully wrote output to generated_content/README.md");
   } catch(err) {
     console.log(err);
   }
