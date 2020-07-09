@@ -49,6 +49,7 @@ async function init() {
     // array field is used to [process questions and populate fields etc.]
     let questionArray = [["input", "title","What is the name of the project : ", "<title>", "GitHub Project",'null'],
                          ["input","repo","What is the repo address :","<repo>", "",'github'],
+                         ["input","repo","What is your Github username :","<username>", "",'githubusername'],
                          ["input","project","What is the live project address : (include https) : ","<project.address>", "",'screencap'],                          
                          ["input","license","What is the license you wish to use (enter for default):","<answers.license>", "https://opensource.org/licenses/mit-license.php",'null'], 
                          ["input","projectdesc","What is description of the project :","<project.desc>", "The author has not provided a description",'null'],    
