@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "axios": "^0.19.2",
+    "capture-website": "^1.0.0",
+    "fetch": "^1.1.0",
+    "inquirer": "^6.3.1",
+    "request": "^2.88.2"
   }
 }
