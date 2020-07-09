@@ -7,12 +7,16 @@ const request = require('request');
 let answers;
 let theAnswer;
 let theResults = [];
+savedResponses = [];
 
 const writeFileAsync = util.promisify(fs.writeFile);
 const readTemplate = util.promisify(fs.readFile);
 
 
-function promptUser(input, title, theMessage) {
+function promptUser(input, title, theMessage,theDefault) {
+  const clc = require('cli-color');
+  console.log(clc.red('Enter for : ' + theDefault));
+
   return inquirer.prompt([
     {
       type: input,
@@ -33,9 +37,6 @@ async function processString(theString) {
       } else {
            useThisAnswer = theResults[i][1];
           }
-    
-     // here we will itterate through the string and update all the fields that need to be updated.
-
 
      // get the number of occurances that this exists
      let repeatNow = theModifiedString.split(theResults[i][2]).length;
@@ -53,37 +54,37 @@ async function processString(theString) {
 async function init() {
   try {
 
-    // array field is used to [process questions and populate fields etc.]
-    let questionArray = [["input", "title","What is the name of the project : ", "<title>", "GitHub Project",'null'],
-                         ["input","repo","What is the repo address :","<repo>", "",'github'],
-                         ["input","repo","What is your Github username :","<username>", "",'githubusername'],
-                         ["input","project","What is the live project address : (include https) : ","<project.address>", "",'screencap'],                          
-                         ["input","license","What is the license you wish to use (enter for default):","<answers.license>", "https://opensource.org/licenses/mit-license.php",'null'], 
-                         ["input","projectdesc","What is description of the project :","<project.desc>", "The author has not provided a description",'null'],    
-                         ["input","projectpurpose","What is purpose of the project :","<project.purpose>", "The author has not provided a purpose",'null'],
-                         ["input","prereqs","What are the project pre-reqs :","<prereqs>", "The author has not provided a pre-reqs",'null'],
-                         ["input","install","What are the steps to install :","<install-details>", "The author has not provided a pre-reqs",'null'],
-                        ]
+    // load up array of previous answers
+  loadSavedResponses = await readTemplate("./tmp/responses.txt", "utf8");
+        // only access the array if the file exists.
+        if (loadSavedResponses) { questionArray = JSON.parse(loadSavedResponses); } 
   
     for (i = 0; i < questionArray.length; i++) {
       theAnswer = questionArray[i][1];
       
         // feed the question array to the prompt user function
-         answers = await promptUser(questionArray[i][0],questionArray[i][1],questionArray[i][2]);
-          // push the results to theresults.[the question title, the answer, the field to be updated and the default text]
+         answers = await promptUser(questionArray[i][0],questionArray[i][1],questionArray[i][2],questionArray[i][4]   );
+         
+          // check if the answer profied is not chr13 - if it is not, then update the answer with the new response.
+          if (answers[ questionArray [i][1]] !== "") {
+              savedResponses[i] = answers[ questionArray [i][1]];
+              questionArray[i][4] = answers[ questionArray [i][1]];
+            }
+
+
+
+         // push the results to theresults.[the question title, the answer, the field to be updated and the default text]
          theResults.push([questionArray [i][1] ,   answers[ questionArray [i][1] ], questionArray [i][3]  , questionArray [i][4] ]);
             
-         // if the user has not provided an appropriate URL, just use the github image capture.
-            if (questionArray[i][5] == "screencap") {
+         // if the user has not provided an appropriate URL, use the github image capture.
+             
+                if (questionArray[i][5] == "screencap") {
               if ( answers[ questionArray [i][1]] == "" ) {useThisURL = "https://www.github.com"} else { useThisURL = answers[ questionArray [i][1]];}
             }      
           }
     
    console.log("Generating website image for : " + useThisURL);
     
-
-   
-   
    await request({
         url: "https://api.apiflash.com/v1/urltoimage",
         encoding: "binary",
@@ -96,7 +97,7 @@ async function init() {
             console.log("Unable to secure screen capture");
         } else {
              fs.writeFile("./generated_content/siteimg.jpeg", body, "binary", error => {
-               // console.log(error);
+    
             });
         }
     });
@@ -106,9 +107,14 @@ async function init() {
     const getTemplate = await readTemplate("./templates/tmp.txt", "utf8");
     let res = await processString(getTemplate);
   
-    // get screenshots of live site
 
+         // write array to tmp/answers files
+         fs.writeFile("./tmp/responses.txt",  JSON.stringify(questionArray), "utf8", error => {
 
+       });
+         
+
+    
     await writeFileAsync("./generated_content/README.md", res);
     console.log("Successfully wrote output to generated_content/README.md");
   } catch (err) {

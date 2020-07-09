@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Good Readme generator 👋</h1>
+<h1 align="center">Welcome to Good README.md file creator 👋</h1>
 
   <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="./siteimg.jpeg" alt="Good Readme generator logo"></a>
+  <a href="github.com" rel="noopener">
+ <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md file creator logo"></a>
 </p>
 
 
@@ -12,13 +12,27 @@
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()  
   [![GitHub issues](https://img.shields.io/github/issues/ginganinjar/ginganinjar-monash-assignment7)](/issues)
   [![GitHub Pull Requests](	https://img.shields.io/github/issues-pr/ginganinjar/ginganinjar-monash-assignment7)]()
+  [![GitHub Forks](	https://img.shields.io/github/forks/ginganinjar/ginganinjar-monash-assignment7?label=Fork)]()
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
 </div>
 
 ---
 
-<p align="center"> The author has not provided a description
+<p align="center"> Good README.md creator is a university assigned project designed to assist developers create a functioning README.md file without much work or pain. It automates most of the creation process creating a file that can be easily formed and designed.
+
+Of special note :
+
+The array, containing most of the information required for this project is contained in ./tmp/responses.txt <- this file is updated on the fly ensuring that users do not need to constantly update information that would otherwise be required.
+
+The README.md file has been designed to present with significant information. Giving readers full access to badges, well formed layout and high presentation.
+
+If an appropriate location is provided in terms of a production system, the CLI script will use an API to snap a production screenshot of the website and provide that also in the website.
+
+The application also takes the authors information and provides that information with the file also.
+
+
+
     <br> 
 </p>
 
@@ -43,7 +57,7 @@ These instructions will get you a copy of the project up and running on your loc
 The author has not provided a pre-reqs
 
 ### Installing
-The author has not provided a pre-reqs
+Clone using SSH or https. 
 
 
 ## 🎈 Usage <a name="usage"></a>
