@@ -1,0 +1,112 @@
+[
+  [
+    'input',
+    'title',
+    'What is the name of the project : ',
+    '<title>',
+    'Good README.md file creator',
+    'null'
+  ],
+  [
+    'input',
+    'repo',
+    'What is the repo address :',
+    '<repo>',
+    'ginganinjar-monash-assignment7',
+    'github'
+  ],
+  [
+    'input',
+    'repo',
+    'What is your Github username :',
+    '<username>',
+    'ginganinjar',
+    'githubusername'
+  ],
+  [
+    'input',
+    'project',
+    'What is the live project address : (include https) : ',
+    '<project.address>',
+    'github.com',
+    'screencap'
+  ],
+  [
+    'input',
+    'license',
+    'What is the license you wish to use (enter for default):',
+    '<answers.license>',
+    'https://opensource.org/licenses/mit-license.php',
+    'null'
+  ],
+  [
+    'editor',
+    'projectdesc',
+    'What is description of the project :',
+    '<project.desc>',
+    'Good README.md creator is a university assigned project designed to assist developers create a functioning README.md file without much work or pain. It automates most of the creation process creating a file that can be easily formed and designed.\n' +
+      '\n' +
+      'Of special note :\n' +
+      '\n' +
+      'The array, containing most of the information required for this project is contained in ./tmp/responses.txt <- this file is updated on the fly ensuring that users do not need to constantly update information that would otherwise be required.\n' +
+      '\n' +
+      'The README.md file has been designed to present with significant information. Giving readers full access to badges, well formed layout and high presentation.\n' +
+      '\n' +
+      'If an appropriate location is provided in terms of a production system, the CLI script will use an API to snap a production screenshot of the website and provide that also in the website.\n' +
+      '\n' +
+      'The application also takes the authors information and provides that information with the file also.\n' +
+      '\n' +
+      '\n',
+    'null'
+  ],
+  [
+    'input',
+    'projectpurpose',
+    'What is purpose of the project :',
+    '<project.purpose>',
+    'The author has not provided a purpose',
+    'null'
+  ],
+  [
+    'input',
+    'prereqs',
+    'What are the project pre-reqs :',
+    '<prereqs>',
+    'The author has not provided a pre-reqs',
+    'null'
+  ],
+  [
+    'input',
+    'install',
+    'What are the steps to install :',
+    '<install-details>',
+    'Clone using SSH or https. ',
+    'null'
+  ],
+  [
+    'input',
+    'contributors',
+    'Who are the contributors :',
+    '<contributors>',
+    'No one other than me :(. ',
+    'null'
+  ]
+,
+  [
+    'input',
+    'tests',
+    'Test and testing information :',
+    '<testing>',
+    'No test harnesses ',
+    'null'
+  ]
+,
+  [
+    'input',
+    'Questions',
+    'Further questions:',
+    '<questions>',
+    'No further questions ',
+    'null'
+  ]
+]

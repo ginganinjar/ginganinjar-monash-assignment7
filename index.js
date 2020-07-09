@@ -57,8 +57,10 @@ async function init() {
     // load up array of previous answers
   loadSavedResponses = await readTemplate("./tmp/responses.txt", "utf8");
         // only access the array if the file exists.
-        if (loadSavedResponses) { questionArray = JSON.parse(loadSavedResponses); } 
   
+  if (loadSavedResponses) { questionArray = JSON.parse(loadSavedResponses); } 
+    console.log(questionArray);
+
     for (i = 0; i < questionArray.length; i++) {
       theAnswer = questionArray[i][1];
       
