@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Good README.md generator 👋</h1>
+<h1 align="center">Welcome to Good Readme.MD reader 👋</h1>
 
   <p align="center">
   <a href="" rel="noopener">
@@ -8,7 +8,7 @@
 
 <div align="center">
 
-  [![GitHub issues](https://img.shields.io/github/followers/:user?label=Follow)](/issues)
+  [![GitHub issues](https://img.shields.io/github/followers/:ginganinjar?label=Follow)](/issues)
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
   [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](/issues)
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
@@ -18,7 +18,7 @@
 
 ---
 
-<p align="center"> A good and well formed readme.md editor
+<p align="center"> A good readme editor to assist in the formation of good readme documentation
     <br> 
 </p>
 
@@ -34,16 +34,16 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-To assist users in creating a well formed readme.md document
+To help create a professional looking readme file quickly
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-none
+None
 
 ### Installing
-Clone and pull
+Clone and install
 
 
 ## 🎈 Usage <a name="usage"></a>

@@ -72,7 +72,7 @@ async function init() {
             }      
           }
     
-   console.log("Generating website image for" + useThisURL);
+   console.log("Generating website image for : " + useThisURL);
     
 
    
