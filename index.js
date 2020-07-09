@@ -35,7 +35,14 @@ async function processString(theString) {
           }
     
      // here we will itterate through the string and update all the fields that need to be updated.
+
+
+     // get the number of occurances that this exists
+     let repeatNow = theModifiedString.split(theResults[i][2]).length;
+
+     for (x = 0; x < repeatNow; x ++) {
      theModifiedString = theModifiedString.replace(theResults[i][2], useThisAnswer );
+     }
 
   }
    return (theModifiedString);
