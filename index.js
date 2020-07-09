@@ -21,6 +21,7 @@ function promptUser(input, title, theMessage,theDefault) {
     {
       type: input,
       name: title,
+      default : theDefault,
       message: theMessage
     }
   ]);

@@ -20,7 +20,7 @@
 ---
 
 <p align="center"> <project.desc>
-    <br> 
+ 
 </p>
 
 ## 📝 Table of Contents
@@ -38,15 +38,12 @@
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Prerequisites
-<prereqs>
-
 ### Installing & 🚀 Deployment <a name = "deployment"></a>
 <install-details>
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-## :mag: Built Using <a name = "built_using"></a>
+## :mag: Testing  <a name = "built_using"></a>
 <testing>
 
 ## ✍️ Authors <a name = "authors"></a>

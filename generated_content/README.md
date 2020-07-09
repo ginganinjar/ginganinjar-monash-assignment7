@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Good README.md file creator 👋</h1>
 
   <p align="center">
-  <a href="github.com" rel="noopener">
+  <a href="https://www.github.com" rel="noopener">
  <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md file creator logo"></a>
 </p>
 
@@ -29,11 +29,16 @@ The README.md file has been designed to present with significant information. Gi
 
 If an appropriate location is provided in terms of a production system, the CLI script will use an API to snap a production screenshot of the website and provide that also in the website.
 
-The application also takes the authors information and provides that information with the file also.
+The application also takes the authors information and provides that information within the file also.
+
+The file ./templates/tmp.txt is the template README.md file. This file can be modified in accordance with the users requires. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
+
+[inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. For example, <title> will take the answer from this array and populate the file with this content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
 
 
 
-    <br> 
+
+ 
 </p>
 
 ## 📝 Table of Contents
@@ -51,15 +56,12 @@ To assist in the design and build of a professional and easily used README.md fi
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Prerequisites
-<prereqs>
-
 ### Installing & 🚀 Deployment <a name = "deployment"></a>
 Clone using SSH or https. 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-## :mag: Built Using <a name = "built_using"></a>
+## :mag: Testing  <a name = "built_using"></a>
 Other than UAT, no testing harnesses have been used.
 
 ## ✍️ Authors <a name = "authors"></a>
