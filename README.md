@@ -1,11 +1,11 @@
-<h1 align="center">Welcome to GitHub Project 👋</h1>
+<h1 align="center">Welcome to Good Readme Generator 👋</h1>
 <p align="center">
   <a href="https://opensource.org/licenses/mit-license.php">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
 
   <p align="center">
-  <a href="https://www.github.com" rel="noopener">
+  <a href="" rel="noopener">
  <img width=200px height=200px src="./siteimg.jpeg" alt="<title> logo"></a>
 </p>
 
@@ -13,7 +13,7 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
+  [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](ginganinjar/ginganinjar-monash-assignment7/issues)
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
@@ -21,7 +21,7 @@
 
 ---
 
-<p align="center"> The author has not provided a description
+<p align="center"> A node based .js application for creating a well formed README.MD file.
     <br> 
 </p>
 
@@ -37,16 +37,16 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-The author has not provided a purpose
+To allow for the simple and automated creation of an acceptable readme.md file.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-The author has not provided a pre-reqs
+Node and CLI. Various module dependencaies which can be implemented using NPM I
 
 ### Installing
-The author has not provided a pre-reqs
+Clone and hack away.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 Explain how to run the automated tests for this system.

@@ -65,8 +65,9 @@ async function init() {
           // push the results to theresults.[the question title, the answer, the field to be updated and the default text]
          theResults.push([questionArray [i][1] ,   answers[ questionArray [i][1] ], questionArray [i][3]  , questionArray [i][4] ]);
             
+         // if the user has not provided an appropriate URL, just use the github image capture.
             if (questionArray[i][5] == "screencap") {
-              useThisURL = answers[ questionArray [i][1]];
+              if ( answers[ questionArray [i][1]] == "" ) {useThisURL = "https://www.github.com"} else { useThisURL = answers[ questionArray [i][1]];}
             }      
           }
     
