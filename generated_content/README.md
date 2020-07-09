@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Good Readme.MD reader 👋</h1>
+<h1 align="center">Welcome to Good readme generator 👋</h1>
 
   <p align="center">
   <a href="" rel="noopener">
@@ -8,17 +8,17 @@
 
 <div align="center">
 
-  [![GitHub issues](https://img.shields.io/github/followers/:ginganinjar?label=Follow)](/issues)
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+  [![GitHub issues](https://img.shields.io/github/followers/ginganinjar?label=Follow)](/issues)
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()  
+  [![GitHub issues](https://img.shields.io/github/issues/<username>/ginganinjar-monash-assignment7)](/issues)
+  [![GitHub Pull Requests](	https://img.shields.io/github/issues-pr/<username>/<repo>)]()
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
 </div>
 
 ---
 
-<p align="center"> A good readme editor to assist in the formation of good readme documentation
+<p align="center"> A well formed good readme generator for creating usable readme files quickly
     <br> 
 </p>
 
@@ -34,7 +34,7 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-To help create a professional looking readme file quickly
+To provide developers with a good looking, well constructed readme file for quick creation of repos
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
@@ -43,7 +43,7 @@ These instructions will get you a copy of the project up and running on your loc
 None
 
 ### Installing
-Clone and install
+Clone / SSH / Pull
 
 
 ## 🎈 Usage <a name="usage"></a>
