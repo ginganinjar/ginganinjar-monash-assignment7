@@ -32,7 +32,7 @@
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+## 🧐 Usage <a name = "about"></a>
 <project.purpose>
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
@@ -40,8 +40,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing & 🚀 Deployment <a name = "deployment"></a>
 <install-details>
-
-## ⛏️ Built Using <a name = "built_using"></a>
 
 ## :mag: Testing  <a name = "built_using"></a>
 <testing>

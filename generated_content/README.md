@@ -35,7 +35,7 @@ The file ./templates/tmp.txt is the template README.md file. This file can be mo
 
 [inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. For example, <title> will take the answer from this array and populate the file with this content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
 
-
+After the application completes, it will create two files (README.md & siteimg.jpeg) - These files will be contained in the directory, ./generated_content. Move these files to the root of your repositry and everything is good to go.
 
 
  
@@ -50,16 +50,14 @@ The file ./templates/tmp.txt is the template README.md file. This file can be mo
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
-To assist in the design and build of a professional and easily used README.md file
+## 🧐 Usage <a name = "about"></a>
+ To assist in the design and build of a professional and easily used README.md file using a CLI editor from within NODE CLI console.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Installing & 🚀 Deployment <a name = "deployment"></a>
-Clone using SSH or https. 
-
-## ⛏️ Built Using <a name = "built_using"></a>
+Clone using SSH or https. To clone using SSH use GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from your console. 
 
 ## :mag: Testing  <a name = "built_using"></a>
 Other than UAT, no testing harnesses have been used.
