@@ -1,19 +1,26 @@
 {
-  "name": "mini-project",
+  "name": "ginganinjar-monash-assignment7",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1 align=\"center\">Welcome to Good README.md creator - make readme's easily 👋</h1>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginganinjar/ginganinjar-monash-assignment7.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ginganinjar/ginganinjar-monash-assignment7/issues"
+  },
+  "homepage": "https://github.com/ginganinjar/ginganinjar-monash-assignment7#readme",
   "dependencies": {
-    "axios": "^0.19.2",
-    "capture-website": "^1.0.0",
     "cli-color": "^2.0.0",
-    "fetch": "^1.1.0",
-    "inquirer": "^6.3.1",
-    "request": "^2.88.2"
+    "fs": "0.0.1-security",
+    "inquirer": "^7.3.0",
+    "request": "^2.88.2",
+    "util": "^0.12.3"
   }
 }

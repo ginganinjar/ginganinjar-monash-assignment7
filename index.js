@@ -1,7 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
 const request = require('request');
 
 let answers;

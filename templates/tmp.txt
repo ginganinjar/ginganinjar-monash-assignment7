@@ -26,11 +26,12 @@
 ## 📝 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Instalation](#deployment)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
+- [License](#license)
+- [Authors](#contributing)
 - [Acknowledgments](#acknowledgement)
+- [Questions](#questions)
 
 ## 🧐 Usage <a name = "about"></a>
 <project.purpose>
@@ -47,8 +48,17 @@ These instructions will get you a copy of the project up and running on your loc
 ## :mag: Testing  <a name = "built_using"></a>
 <testing>
 
-## ✍️ Authors <a name = "authors"></a>
+## ✍️ Authors <a name = "contributing"></a>
 <authors>
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 <thanks>
+
+### :copyright: License <a name = "license"></a>
+
+```sh
+<answers.license>)
+```
+
+## :question: Questions <a name = "questions"></a>
+<questions>
