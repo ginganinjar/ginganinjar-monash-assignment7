@@ -16,14 +16,15 @@
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
 </div>
+
 [![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
 ---
 
 <p align="center"> This node based CLI application has been developed and designed to assist the developer with the gruelling task of creating a README.md file based on Githubs formatting standard.
 
-The file ./templates/tmp.txt is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
+The file _./templates/tmp.txt_ is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
 
-[inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. In this scenario, the word <title> as defined in the ./tmp/responses.txt file will take the answer from inputted CLI and generate a new README.md file with this content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
+[inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. In this scenario, the word <title> as defined in the ./tmp/responses.json file will take the answer from inputted CLI and generate a new README.md file with this content which is saved in the sub directory generated_content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
 
 After the application completes, it will create two files (README.md & siteimg.jpeg) - These files will be contained in the directory, ./generated_content. Move these files to the root of your repository and everything is good to go.
 
