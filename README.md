@@ -16,7 +16,6 @@
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
 </div>
-
 [![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
 ---
 
@@ -81,9 +80,8 @@ A special thanks to Tri Nguyen
 
 ### :copyright: License <a name = "license"></a>
 
-```sh
 [License](https://opensource.org/licenses/mit-license.php)
-```
+
 
 ## :question: Questions <a name = "<questions"></a>
 Questions, concers, comments ? 
