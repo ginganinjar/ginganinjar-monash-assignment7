@@ -17,10 +17,11 @@
 
 </div>
 
+[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
+
 ---
 
-<p align="center"> [![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
-
+<p align="center"> 
 This node based CLI application has been developed and designed to assist the developer with the gruelling task of creating a README.md file based on Githubs formatting standard.
 
 The file _./templates/tmp.txt_ is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
