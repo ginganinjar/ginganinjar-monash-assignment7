@@ -91,7 +91,7 @@ async function init() {
 
     console.log("Generating website image for : " + useThisURL);
 
-    await request({
+     request({
       url: "https://api.apiflash.com/v1/urltoimage",
       encoding: "binary",
       qs: {
