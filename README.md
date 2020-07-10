@@ -17,8 +17,6 @@
 
 </div>
 
-[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
-
 ---
 
 <p align="center"> Good README.md creator is a university assigned project designed to assist developers create a functioning README.md file without much work or pain. It automates most of the creation process creating a file that can be easily formed and designed.
@@ -46,11 +44,12 @@ After the application completes, it will create two files (README.md & siteimg.j
 ## 📝 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Instalation](#deployment)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
+- [License](#license)
+- [Authors](#contributing)
 - [Acknowledgments](#acknowledgement)
+- [Questions](#questions)
 
 ## 🧐 Usage <a name = "about"></a>
  To assist in the design and build of a professional and easily used README.md file using a CLI editor from within NODE CLI console.
@@ -73,11 +72,20 @@ npm install
 ## :mag: Testing  <a name = "built_using"></a>
 UAT - specifically no others
 
-## ✍️ Authors <a name = "authors"></a>
-Myself, David S.
+## ✍️ Authors <a name = "contributing"></a>
+David S.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 A special thanks to Tri Nguyen
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-A special thanks to Tri Nguyen
+### :copyright: License <a name = "license"></a>
+
+```sh
+https://opensource.org/licenses/mit-license.php)
+```
+
+## :question: Questions <a name = "<questions"></a>
+Questions, concers, comments ? 
+
+Please feel free to contact me at : https://ginganinjar.github.io/contact.html
+
