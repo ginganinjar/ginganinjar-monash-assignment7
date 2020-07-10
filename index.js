@@ -4,7 +4,6 @@ const util = require("util");
 const request = require('request');
 
 let answers;
-let theAnswer;
 let theResults = [];
 savedResponses = [];
 
