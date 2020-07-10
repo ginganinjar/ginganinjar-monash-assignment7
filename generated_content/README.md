@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Good README.md file creator 👋</h1>
+<h1 align="center">Welcome to Good README.md creator - make readme's easily 👋</h1>
 
   <p align="center">
   <a href="https://www.github.com" rel="noopener">
- <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md file creator logo"></a>
+ <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md creator - make readme's easily logo"></a>
 </p>
 
 
@@ -69,10 +69,10 @@ npm install
 ```
 
 ## :mag: Testing  <a name = "built_using"></a>
-Other than UAT, no testing harnesses have been used.
+UAT - specifically no others
 
 ## ✍️ Authors <a name = "authors"></a>
-David Sparrius
+Myself, David S.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 A special thanks to Tri Nguyen
