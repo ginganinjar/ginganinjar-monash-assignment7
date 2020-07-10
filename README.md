@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Good README.md creator - make readme's easily 👋</h1>
 
   <p align="center">
-  <a href="https://www.github.com" rel="noopener">
+  <a href=" https://ginganinjar.github.io/ginganinjar-monash-assignment7/" rel="noopener">
  <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md creator - make readme's easily logo"></a>
 </p>
 
@@ -17,8 +17,7 @@
 
 </div>
 
-
-[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/T-D1KVIuvjA)
+[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
 
 ---
 
