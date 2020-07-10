@@ -54,7 +54,7 @@ async function init() {
   try {
 
     // load up array of previous answers
-    loadSavedResponses = await readTemplate("./tmp/responses.json", "utf8");
+    loadSavedResponses = await readTemplate("./assets/responses.json", "utf8");
     // only access the array if the file exists.
 
     if (loadSavedResponses) {
@@ -115,8 +115,8 @@ async function init() {
     let res = await processString(getTemplate);
 
 
-    // write array to tmp/answers files
-    fs.writeFile("./tmp/responses.json", JSON.stringify(questionArray), "utf8", error => {
+    // write array to assets/answers files
+    fs.writeFile("./assets/responses.json", JSON.stringify(questionArray), "utf8", error => {
       () => {};
     });
 
