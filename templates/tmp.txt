@@ -57,7 +57,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### :copyright: License <a name = "license"></a>
 
 ```sh
-<answers.license>)
+[License](<answers.license>)
 ```
 
 ## :question: Questions <a name = "<questions"></a>

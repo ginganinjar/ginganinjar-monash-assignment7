@@ -18,7 +18,6 @@
 </div>
 
 [![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
-
 ---
 
 <p align="center"> Good README.md creator is a university assigned project designed to assist developers create a functioning README.md file without much work or pain. It automates most of the creation process creating a file that can be easily formed and designed.
@@ -83,7 +82,7 @@ A special thanks to Tri Nguyen
 ### :copyright: License <a name = "license"></a>
 
 ```sh
-https://opensource.org/licenses/mit-license.php)
+[License](https://opensource.org/licenses/mit-license.php)
 ```
 
 ## :question: Questions <a name = "<questions"></a>
