@@ -15,7 +15,7 @@ const readTemplate = util.promisify(fs.readFile);
 
 function promptUser(input, title, theMessage, theDefault) {
 
-  console.log(clc.blue('Enter for : ' + theDefault));
+  console.log(clc.blue('Enter for previous answer : ' + theDefault));
 
   return inquirer.prompt([{
     type: input,
