@@ -19,23 +19,34 @@
 
 ---
 
-<p align="center"> Good README.md creator is a university assigned project designed to assist developers create a functioning README.md file without much work or pain. It automates most of the creation process creating a file that can be easily formed and designed.
+<p align="center"> This node based CLI application has been developed and designed to assist the developer with the gruelling task of creating a README.md file based on Githubs formatting standard.
 
-Of special note :
+The file ./templates/tmp.txt is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
 
-The array, containing most of the information required for this project is contained in ./tmp/responses.txt <- this file is updated on the fly ensuring that users do not need to constantly update information that would otherwise be required.
+[inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. In this scenario, the word <title> as defined in the ./tmp/responses.txt file will take the answer from inputted CLI and generate a new README.md file with this content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
 
-The README.md file has been designed to present with significant information. Giving readers full access to badges, well formed layout and high presentation.
+After the application completes, it will create two files (README.md & siteimg.jpeg) - These files will be contained in the directory, ./generated_content. Move these files to the root of your repository and everything is good to go.
 
-If an appropriate location is provided in terms of a production system, the CLI script will use an API to snap a production screenshot of the website and provide that also in the website.
+The primary requirement of this assignment was to achieve the following : 
 
-The application also takes the authors information and provides that information within the file also.
+Functional application.
 
-The file ./templates/tmp.txt is the template README.md file. This file can be modified in accordance with the users requires. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
+* GitHub repository with a unique name and a README describing project.
 
-[inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. For example, <title> will take the answer from this array and populate the file with this content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
+* The generated README includes the following sections: 
 
-After the application completes, it will create two files (README.md & siteimg.jpeg) - These files will be contained in the directory, ./generated_content. Move these files to the root of your repositry and everything is good to go.
+  * Title
+  * Description
+  * Table of Contents
+  * Installation
+  * Usage
+  * License
+  * Contributing
+  * Tests
+  * Questions
+
+* The generated README includes 1 badge that's specific to the repository.
+
 
 
  
