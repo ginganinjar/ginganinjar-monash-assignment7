@@ -12,6 +12,7 @@ savedResponses = [];
 const writeFileAsync = util.promisify(fs.writeFile);
 const readTemplate = util.promisify(fs.readFile);
 
+// function used to itterate through the questions contained in the array.
 
 function promptUser(input, title, theMessage,theDefault) {
   const clc = require('cli-color');
@@ -60,7 +61,6 @@ async function init() {
         // only access the array if the file exists.
   
   if (loadSavedResponses) { questionArray = JSON.parse(loadSavedResponses); } 
-    console.log(questionArray);
 
     for (i = 0; i < questionArray.length; i++) {
       theAnswer = questionArray[i][1];

@@ -57,6 +57,8 @@ After the application completes, it will create two files (README.md & siteimg.j
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Installing & 🚀 Deployment <a name = "deployment"></a>
+
+```sh
 Clone the repo 
 
 GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from your console.   
@@ -64,6 +66,7 @@ GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from you
 Install NPM packages
 npm install 
 
+```
 
 ## :mag: Testing  <a name = "built_using"></a>
 Other than UAT, no testing harnesses have been used.
