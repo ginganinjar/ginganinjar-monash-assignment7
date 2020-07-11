@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Good README.md creator - make readme's easily 👋</h1>
+<h1 align="center">Welcome to A good and easy reader 👋</h1>
 
   <p align="center">
-  <a href=" https://ginganinjar.github.io/ginganinjar-monash-assignment7/" rel="noopener">
- <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md creator - make readme's easily logo"></a>
+  <a href="https://www.github.com" rel="noopener">
+ <img width=200px height=200px src="./siteimg.jpeg" alt="A good and easy reader logo"></a>
 </p>
 
 
@@ -18,12 +18,13 @@
 </div>
 
 [![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
+
 ---
 
 <p align="center"> 
 This node based CLI application has been developed and designed to assist the developer with the gruelling task of creating a README.md file based on Githubs formatting standard.
 
-The file _./templates/tmp.txt_ is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./assets/responses.json contains a stringify'ed array : the structure of that array is as follows : 
+The file _./templates/tmp.txt_ is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
 
 [inquirer input type],[The question asked to the user], [the field to be updated in the README.md file. In this scenario, the word <title> as defined in the ./assets/responses.json file will take the answer from inputted CLI and generate a new README.md file with this content], [the default response which is updated every time the user makes a change], [null <- this field is used internally by the application and cannot be changed]
 
@@ -49,15 +50,16 @@ Functional application.
 
 * The generated README includes 1 badge that's specific to the repository.
 
-
-
- 
 </p>
+
+## :package: Repositry
+git+https://github.com/ginganinjar/ginganinjar-monash-assignment7.git
 
 ## 📝 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Instalation](#deployment)
+- [Dependancies](#dependancies)
 - [Usage](#usage)
 - [License](#license)
 - [Authors](#contributing)
@@ -79,11 +81,21 @@ GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from you
 
 Install NPM packages
 npm install 
-
+ - primarily executable : index.js
 ```
+## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
+{
+ "cli-color": "^2.0.0",
+ "fs": "0.0.1-security",
+ "inquirer": "^7.3.0",
+ "npm": "^6.14.6",
+ "read-package-json": "^2.1.1",
+ "request": "^2.88.2",
+ "util": "^0.12.3"
+}
 
 ## :mag: Testing  <a name = "built_using"></a>
-UAT - specifically no others
+echo "Error: no test specified" && exit 1
 
 ## ✍️ Authors <a name = "contributing"></a>
 David S.
@@ -94,7 +106,6 @@ A special thanks to Tri Nguyen
 ### :copyright: License <a name = "license"></a>
 
 [License](https://opensource.org/licenses/mit-license.php)
-
 
 ## :question: Questions <a name = "<questions"></a>
 Questions, concers, comments ? 

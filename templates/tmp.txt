@@ -23,10 +23,14 @@
  
 </p>
 
+## :package: Repositry
+<repositry>
+
 ## 📝 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Instalation](#deployment)
+- [Dependancies](#dependancies)
 - [Usage](#usage)
 - [License](#license)
 - [Authors](#contributing)
@@ -42,8 +46,10 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing & 🚀 Deployment <a name = "deployment"></a>
 
 ```sh
-<install-details>
+<install-details> - primarily executable : <main>
 ```
+## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
+<dependancies>
 
 ## :mag: Testing  <a name = "built_using"></a>
 <testing>
@@ -57,7 +63,6 @@ These instructions will get you a copy of the project up and running on your loc
 ### :copyright: License <a name = "license"></a>
 
 [License](<answers.license>)
-
 
 ## :question: Questions <a name = "<questions"></a>
 <questions>

@@ -3,9 +3,12 @@ const fs = require("fs");
 const util = require("util");
 const request = require("request");
 const clc = require("cli-color");
+const readJson = require("read-package-json");
+const { red } = require("cli-color");
 
 let theResults = [];
 let savedResponses = [];
+
 
 const writeFileAsync = util.promisify(fs.writeFile);
 const readTemplate = util.promisify(fs.readFile);
@@ -25,6 +28,16 @@ function promptUser(input, title, theMessage, theDefault) {
   ]);
 }
 
+ function makeChanges(masterString, changeThis, changeTo) {
+  let repeatNow = masterString.split(changeThis).length;
+
+  for (x = 0; x < repeatNow; x++) {
+    masterString = masterString.replace(theResults[i][2], changeTo);
+  }
+
+  return masterString;
+}
+
 async function processString(theString) {
   let theModifiedString = theString.toString();
 
@@ -36,16 +49,13 @@ async function processString(theString) {
       useThisAnswer = theResults[i][1];
     }
 
-    // get the number of occurances that this exists
-    let repeatNow = theModifiedString.split(theResults[i][2]).length;
-
-    for (x = 0; x < repeatNow; x++) {
-      theModifiedString = theModifiedString.replace(
-        theResults[i][2],
-        useThisAnswer
-      );
-    }
+    theModifiedString = makeChanges(
+      theModifiedString,
+      theResults[i][2],
+      useThisAnswer
+    );
   }
+
   return theModifiedString;
 }
 
@@ -123,19 +133,49 @@ async function init() {
     );
 
     const getTemplate = await readTemplate("./templates/tmp.txt", "utf8");
-    let res = await processString(getTemplate);
+     res = await processString(getTemplate);
+
+    // import the package.json NPM dependancies
+    readJson("./package.json", console.error, false, function (er, data) {
+      if (er) {
+        res = res.replace("<dependancies>", "No dependencies identified");
+        return;
+      } else {
+        res = res.replace(
+          "<dependancies>",
+          JSON.stringify(data["dependencies"], null, " ")
+        );
+      
+        // function for multiple edits
+        function makeChanges(changefrom, changeto) {
+        let repeatLoops = res.split(changefrom).length;
+
+        for (z = 0; z < repeatLoops; z++) {
+          res = res.replace(changefrom, changeto);
+        }
+      }
+
+        // process package.json values to update README.md file and reduce user work
+        makeChanges("<repo>",data["name"] );
+        makeChanges("<main>",data["main"] );
+        makeChanges("<repositry>", data["repository"]["url"] );
+        makeChanges("<testing>", data.scripts.test );   
+
+      }
+
+      fs.writeFile(
+        "./assets/responses.json",
+        JSON.stringify(questionArray),
+        "utf8",
+        (error) => {
+          () => {};
+        }
+      );
+
+      writeFileAsync("./generated_content/README.md", res);
+    });
 
     // write array to assets/answers files
-    fs.writeFile(
-      "./assets/responses.json",
-      JSON.stringify(questionArray),
-      "utf8",
-      (error) => {
-        () => {};
-      }
-    );
-
-    await writeFileAsync("./generated_content/README.md", res);
     console.log("Successfully wrote output to generated_content/README.md");
   } catch (err) {
     console.log(err);

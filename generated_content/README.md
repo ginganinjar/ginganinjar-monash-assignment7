@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Good README.md creator - make readme's easily 👋</h1>
+<h1 align="center">Welcome to A good and easy reader 👋</h1>
 
   <p align="center">
   <a href="https://www.github.com" rel="noopener">
- <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md creator - make readme's easily logo"></a>
+ <img width=200px height=200px src="./siteimg.jpeg" alt="A good and easy reader logo"></a>
 </p>
 
 
@@ -16,6 +16,8 @@
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
 </div>
+
+[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
 
 ---
 
@@ -48,15 +50,16 @@ Functional application.
 
 * The generated README includes 1 badge that's specific to the repository.
 
-
-
- 
 </p>
+
+## :package: Repositry
+git+https://github.com/ginganinjar/ginganinjar-monash-assignment7.git
 
 ## 📝 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Instalation](#deployment)
+- [Dependancies](#dependancies)
 - [Usage](#usage)
 - [License](#license)
 - [Authors](#contributing)
@@ -78,11 +81,21 @@ GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from you
 
 Install NPM packages
 npm install 
-
+ - primarily executable : index.js
 ```
+## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
+{
+ "cli-color": "^2.0.0",
+ "fs": "0.0.1-security",
+ "inquirer": "^7.3.0",
+ "npm": "^6.14.6",
+ "read-package-json": "^2.1.1",
+ "request": "^2.88.2",
+ "util": "^0.12.3"
+}
 
 ## :mag: Testing  <a name = "built_using"></a>
-UAT - specifically no others
+echo "Error: no test specified" && exit 1
 
 ## ✍️ Authors <a name = "contributing"></a>
 David S.
@@ -93,7 +106,6 @@ A special thanks to Tri Nguyen
 ### :copyright: License <a name = "license"></a>
 
 [License](https://opensource.org/licenses/mit-license.php)
-
 
 ## :question: Questions <a name = "<questions"></a>
 Questions, concers, comments ? 
