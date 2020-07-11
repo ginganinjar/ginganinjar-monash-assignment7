@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to A good and easy reader 👋</h1>
+<h1 align="center">Welcome to Good README.md generator - for Monash 👋</h1>
 
   <p align="center">
   <a href="https://www.github.com" rel="noopener">
- <img width=200px height=200px src="./siteimg.jpeg" alt="A good and easy reader logo"></a>
+ <img width=200px height=200px src="./siteimg.jpeg" alt="Good README.md generator - for Monash logo"></a>
 </p>
 
 
@@ -17,12 +17,12 @@
 
 </div>
 
-[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/QUNrV7xauHI)
+[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/0CFjF-hvQl0)
 
 ---
 
 <p align="center"> 
-This node based CLI application has been developed and designed to assist the developer with the gruelling task of creating a README.md file based on Githubs formatting standard.
+This node based CLI application has been developed for NODE and designed to assist the developer with the gruelling task of creating a README.md file based on Githubs formatting standard.
 
 The file _./templates/tmp.txt_ is the template README.md file. This file can be modified in accordance with the users requirements. The user may elect to insert an appropriate key inside this file and that will automatically be populated at the time of execution. The key format is defined by the use of the “<” and “>” characters. For example, the file ./tmp/responses.txt contains a stringify'ed array : the structure of that array is as follows : 
 
@@ -50,6 +50,9 @@ Functional application.
 
 * The generated README includes 1 badge that's specific to the repository.
 
+
+
+ 
 </p>
 
 ## :package: Repositry
@@ -80,7 +83,11 @@ Clone the repo
 GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from your console.   
 
 Install NPM packages
-npm install 
+
+npm i
+
+node index.js
+ 
  - primarily executable : index.js
 ```
 ## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
@@ -98,10 +105,10 @@ npm install
 echo "Error: no test specified" && exit 1
 
 ## ✍️ Authors <a name = "contributing"></a>
-David S.
+David. S
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-A special thanks to Tri Nguyen
+To you guys at Trilogy
 
 ### :copyright: License <a name = "license"></a>
 
@@ -112,3 +119,4 @@ Questions, concers, comments ?
 
 Please feel free to contact me at : https://ginganinjar.github.io/contact.html
 
+Looking forward to hearing from you.
