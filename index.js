@@ -4,7 +4,6 @@ const util = require("util");
 const request = require("request");
 const clc = require("cli-color");
 const readJson = require("read-package-json");
-const { red } = require("cli-color");
 
 let theResults = [];
 let savedResponses = [];
