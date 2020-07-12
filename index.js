@@ -58,26 +58,27 @@ async function processString(theString) {
 
 async function init() {
   try {
-  let getJson = null;
+    let getJson = null;
 
-  while ((getJson == null) || (!getJson)) {
-    let theJsonResponse = await promptUser(
-      "prompt",
-      "jsonLocation",
-      "Full path and filename to package.json file:",
-      "./package.json"
-    );
+    while (getJson == null || !getJson) {
+      let theJsonResponse = await promptUser(
+        "prompt",
+        "jsonLocation",
+        "Full path and filename to package.json file:",
+        "./package.json"
+      );
 
-    // access the package.json file to identify information.fail
-     try {getJson = await readTemplate(theJsonResponse["jsonLocation"], "utf8");}
-     catch (err) {
-      // if the file is not found, report an error and try, try again.
-      console.log("File not found - please try again.")
-     getJson = null;
+      // access the package.json file to identify information.fail
+      try {
+        getJson = await readTemplate(theJsonResponse["jsonLocation"], "utf8");
+      } catch (err) {
+        // if the file is not found, report an error and try, try again.
+        console.log("File not found - please try again.");
+        getJson = "NA";
+      }
     }
-  }
 
-      Jsonresults = JSON.parse(getJson);
+    Jsonresults = JSON.parse(getJson);
 
     // load up array of previous answers
     loadSavedResponses = await readTemplate("./assets/responses.json", "utf8");
@@ -169,13 +170,15 @@ async function init() {
     }
 
     // take information contained from within the package.json file and populate it.
-    // if i have time, i'll add below to an automated array json file.
+    // if i have time, i'll add below to an automated array json file. If the packages.json file
+    // exists. Else skip this step.
 
-    makeChanges("<repo>", Jsonresults["name"]);
-    makeChanges("<main>", Jsonresults["main"]);
-    makeChanges("<repositry>", Jsonresults["repository"]["url"]);
-    makeChanges("<testing>", Jsonresults.scripts.test);
-
+    if (getJson !== "NA") {
+      makeChanges("<repo>", Jsonresults["name"]);
+      makeChanges("<main>", Jsonresults["main"]);
+      makeChanges("<repositry>", Jsonresults["repository"]["url"]);
+      makeChanges("<testing>", Jsonresults.scripts.test);
+    }
     fs.writeFile(
       "./assets/responses.json",
       JSON.stringify(questionArray),
