@@ -17,6 +17,7 @@
 
 </div>
 
+[![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/0CFjF-hvQl0)
 ---
 
 <p align="center"> 
