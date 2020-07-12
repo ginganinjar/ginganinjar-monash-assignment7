@@ -21,12 +21,14 @@
 
 <p align="center"> Monash assignment : 10
 
+More info coming shortly...:
+
 
  
 </p>
 
 ## :package: Repositry
-git+https://github.com/stevetrilogy/unit10hw.git
+git+https://github.com/ginganinjar/ginganinjar-monash-assignment10
 
 ## 📝 Table of Contents
 - [About](#about)
