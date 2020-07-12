@@ -58,6 +58,8 @@ async function processString(theString) {
 
 async function init() {
   try {
+    console.log(__dirname);
+    dirPath = __dirname;
     let getJson = null;
 
     while (getJson == null || !getJson) {
@@ -71,6 +73,7 @@ async function init() {
       // access the package.json file to identify information.fail
       try {
         getJson = await readTemplate(theJsonResponse["jsonLocation"], "utf8");
+       
       } catch (err) {
         // if the file is not found, report an error and try, try again.
         console.log("File not found - please try again.");
@@ -78,10 +81,10 @@ async function init() {
       }
     }
 
-    Jsonresults = JSON.parse(getJson);
+    if (getJson !== "NA") {Jsonresults = JSON.parse(getJson);}
 
     // load up array of previous answers
-    loadSavedResponses = await readTemplate("./assets/responses.json", "utf8");
+    loadSavedResponses = await readTemplate(dirPath + "/assets/responses.json", "utf8");
     // only access the array if the file exists.
 
     if (loadSavedResponses) {
@@ -152,7 +155,7 @@ async function init() {
     );
 
     // load default tmp.txt file (this is used to generate readme.md file)
-    const getTemplate = await readTemplate("./templates/tmp.txt", "utf8");
+    const getTemplate = await readTemplate(dirPath + "/templates/tmp.txt", "utf8");
     res = await processString(getTemplate);
 
     res = res.replace(
@@ -180,7 +183,7 @@ async function init() {
       makeChanges("<testing>", Jsonresults.scripts.test);
     }
     fs.writeFile(
-      "./assets/responses.json",
+      dirPath + "/assets/responses.json",
       JSON.stringify(questionArray),
       "utf8",
       (error) => {
@@ -188,10 +191,10 @@ async function init() {
       }
     );
 
-    writeFileAsync("./generated_content/README.md", res);
+    writeFileAsync(dirPath + "/generated_content/README.md", res);
 
     // write array to assets/answers files
-    console.log("Successfully wrote output to generated_content/README.md");
+    console.log("Successfully wrote output to + " + dirPath + "/generated_content/README.md");
   } catch (err) {
     console.log(err);
   }
