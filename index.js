@@ -156,7 +156,7 @@ async function init() {
 
     res = res.replace(
       "<dependancies>",
-      JSON.stringify(Jsonresults["dependencies"], null, " ")
+      JSON.stringify(Jsonresults["dependencies"], null, " \n ")
     );
 
     // function for multiple edits

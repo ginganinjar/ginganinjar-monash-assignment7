@@ -17,7 +17,9 @@
 
 </div>
 
+
 [![Watch the video](./generated_content/watch_the_video.png)](https://youtu.be/0CFjF-hvQl0)
+
 ---
 
 <p align="center"> 
@@ -91,10 +93,15 @@ node index.js
 ```
 ## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
 {
+ 
  "cli-color": "^2.0.0",
+ 
  "fs": "0.0.1-security",
+ 
  "inquirer": "^7.3.0",
+ 
  "request": "^2.88.2",
+ 
  "util": "^0.12.3"
 }
 
