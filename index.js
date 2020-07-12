@@ -3,11 +3,9 @@ const fs = require("fs");
 const util = require("util");
 const request = require("request");
 const clc = require("cli-color");
-const readJson = require("read-package-json");
 
 let theResults = [];
 let savedResponses = [];
-
 
 const writeFileAsync = util.promisify(fs.writeFile);
 const readTemplate = util.promisify(fs.readFile);
@@ -27,7 +25,7 @@ function promptUser(input, title, theMessage, theDefault) {
   ]);
 }
 
- function makeChanges(masterString, changeThis, changeTo) {
+function makeChanges(masterString, changeThis, changeTo) {
   let repeatNow = masterString.split(changeThis).length;
 
   for (x = 0; x < repeatNow; x++) {
@@ -60,6 +58,27 @@ async function processString(theString) {
 
 async function init() {
   try {
+  let getJson = null;
+
+  while ((getJson == null) || (!getJson)) {
+    let theJsonResponse = await promptUser(
+      "prompt",
+      "jsonLocation",
+      "Full path and filename to package.json file:",
+      "./package.json"
+    );
+
+    // access the package.json file to identify information.fail
+     try {getJson = await readTemplate(theJsonResponse["jsonLocation"], "utf8");}
+     catch (err) {
+      // if the file is not found, report an error and try, try again.
+      console.log("File not found - please try again.")
+     getJson = null;
+    }
+  }
+
+      Jsonresults = JSON.parse(getJson);
+
     // load up array of previous answers
     loadSavedResponses = await readTemplate("./assets/responses.json", "utf8");
     // only access the array if the file exists.
@@ -131,48 +150,42 @@ async function init() {
       }
     );
 
+    // load default tmp.txt file (this is used to generate readme.md file)
     const getTemplate = await readTemplate("./templates/tmp.txt", "utf8");
-     res = await processString(getTemplate);
+    res = await processString(getTemplate);
 
-    // import the package.json NPM dependancies
-    readJson("./package.json", console.error, false, function (er, data) {
-      if (er) {
-        res = res.replace("<dependancies>", "No dependencies identified");
-        return;
-      } else {
-        res = res.replace(
-          "<dependancies>",
-          JSON.stringify(data["dependencies"], null, " ")
-        );
-      
-        // function for multiple edits
-        function makeChanges(changefrom, changeto) {
-        let repeatLoops = res.split(changefrom).length;
+    res = res.replace(
+      "<dependancies>",
+      JSON.stringify(Jsonresults["dependencies"], null, " ")
+    );
 
-        for (z = 0; z < repeatLoops; z++) {
-          res = res.replace(changefrom, changeto);
-        }
+    // function for multiple edits
+    function makeChanges(changefrom, changeto) {
+      let repeatLoops = res.split(changefrom).length;
+
+      for (z = 0; z < repeatLoops; z++) {
+        res = res.replace(changefrom, changeto);
       }
+    }
 
-        // process package.json values to update README.md file and reduce user work
-        makeChanges("<repo>",data["name"] );
-        makeChanges("<main>",data["main"] );
-        makeChanges("<repositry>", data["repository"]["url"] );
-        makeChanges("<testing>", data.scripts.test );   
+    // take information contained from within the package.json file and populate it.
+    // if i have time, i'll add below to an automated array json file.
 
+    makeChanges("<repo>", Jsonresults["name"]);
+    makeChanges("<main>", Jsonresults["main"]);
+    makeChanges("<repositry>", Jsonresults["repository"]["url"]);
+    makeChanges("<testing>", Jsonresults.scripts.test);
+
+    fs.writeFile(
+      "./assets/responses.json",
+      JSON.stringify(questionArray),
+      "utf8",
+      (error) => {
+        () => {};
       }
+    );
 
-      fs.writeFile(
-        "./assets/responses.json",
-        JSON.stringify(questionArray),
-        "utf8",
-        (error) => {
-          () => {};
-        }
-      );
-
-      writeFileAsync("./generated_content/README.md", res);
-    });
+    writeFileAsync("./generated_content/README.md", res);
 
     // write array to assets/answers files
     console.log("Successfully wrote output to generated_content/README.md");
