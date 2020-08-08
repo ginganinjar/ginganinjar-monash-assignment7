@@ -179,7 +179,7 @@ async function init() {
     if (getJson !== "NA") {
       makeChanges("<repo>", Jsonresults["name"]);
       makeChanges("<main>", Jsonresults["main"]);
-     // makeChanges("<repositry>", Jsonresults["repository"]["url"]);
+      makeChanges("<repositry>", Jsonresults["repository"]);
       makeChanges("<testing>", Jsonresults.scripts.test);
     }
     fs.writeFile(
