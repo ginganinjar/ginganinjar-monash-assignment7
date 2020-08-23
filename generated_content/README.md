@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to Unit 12 MySQL Homework: Employee Tracker 👋</h1>
+<h1 align="center">Welcome to Group Project 2 - Anon web chat 👋</h1>
 
   <p align="center">
-  <a href="www.github.com" rel="noopener">
- <img width=200px height=200px src="./siteimg.jpeg" alt="Unit 12 MySQL Homework: Employee Tracker logo"></a>
+  <a href="https://chirpgram.herokuapp.com" rel="noopener">
+ <img width=200px height=200px src="./siteimg.jpeg" alt="Group Project 2 - Anon web chat logo"></a>
 </p>
 
 
@@ -10,37 +10,25 @@
 
   [![GitHub issues](https://img.shields.io/github/followers/ginganinjar?label=Follow)](/issues)
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()  
-  [![GitHub issues](https://img.shields.io/github/issues/ginganinjar/employee_tracker)](/issues)
-  [![GitHub Pull Requests](	https://img.shields.io/github/issues-pr/ginganinjar/employee_tracker)]()
-  [![GitHub Forks](	https://img.shields.io/github/forks/ginganinjar/employee_tracker?label=Fork)]()
+  [![GitHub issues](https://img.shields.io/github/issues/ginganinjar/1-Passport-Example)](/issues)
+  [![GitHub Pull Requests](	https://img.shields.io/github/issues-pr/ginganinjar/1-Passport-Example)]()
+  [![GitHub Forks](	https://img.shields.io/github/forks/ginganinjar/1-Passport-Example?label=Fork)]()
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.php)
 
 </div>
 
 ---
 
-<p align="center">  This project involes the architecture and build a solution for managing a company's employees using node, inquirer, and MySQL using a console interface delivering a **C**ontent **M**anagement **S**ystems.
+<p align="center"> Given the increase in surveliance, we developed a Node based  MVC solution to provide users with a form of anonymous communication.
 
-The database required 3 tables, departments, role and employee. A scheme is included below :
-
-![Database Schema](Assets/schema.png)
-
-As per the requirement, the application contains the following features :
- 
-  * Update employee managers
-  * View employees by manager
-  * Delete departments, roles, and employees
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department
-
-Contained within the ./scheme are two files, seed.sql and schema.sql which will be required to be executed for this application to work correctly.
-
-
+This node based application uses socket.io to allow for group and private peer to peer communications. All communication is totally private and is not recorded or saved either locally or on the web client. As soon as the web clients window is closed, the information is lost. Users are given the option of creating their own profile including personal contact information and other such information. The chat can be customised in various ways including the users ability to alter colors of their chosen communication strategy. 
+:
 
  
 </p>
 
 ## :package: Repositry
-<repositry>
+undefined
 
 ## 📝 Table of Contents
 - [About](#about)
@@ -54,7 +42,7 @@ Contained within the ./scheme are two files, seed.sql and schema.sql which will 
 - [Questions](#questions)
 
 ## 🧐 Usage <a name = "about"></a>
-To allow developers to build, manage and deploy workforce tracking
+To provide users with an anonymous and unmonitored form of communication.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
@@ -64,7 +52,7 @@ These instructions will get you a copy of the project up and running on your loc
 ```sh
 Clone the repo 
 
-GIT CLONE git@github.com:ginganinjar/ginganinjar-monash-assignment7.git from your console.   
+GIT CLONE  git@github.com:ginganinjar/chirpgram.git from your console.   
 
 Install NPM packages
 
@@ -73,38 +61,42 @@ npm i
 NODE tracker.js
 
  
- - primarily executable : tacker.js
+ - primarily executable : server.js
 ```
 ## :heavy_plus_sign: Dependancies  <a name = "dependancies"></a>
 {
  
- "clear": "^0.1.0",
+ "bcryptjs": "2.4.3",
  
- "express": "^4.17.1",
+ "dotenv": "^8.2.0",
  
- "fs": "0.0.1-security",
+ "express": "^4.17.0",
  
- "inquirer": "^7.3.3",
+ "express-handlebars": "^5.1.0",
  
- "mysql": "^2.18.1",
+ "express-session": "^1.16.1",
  
- "nodemon": "^2.0.4",
+ "multer": "^1.4.2",
  
- "path": "^0.12.7",
+ "mysql2": "^1.7.0",
  
- "readline": "^1.3.0",
+ "passport": "^0.4.1",
  
- "rl": "0.0.1"
+ "passport-local": "^1.0.0",
+ 
+ "sequelize": "^5.8.6",
+ 
+ "socket.io": "^2.3.0"
 }
 
 ## :mag: Testing  <a name = "built_using"></a>
-echo "Error: no test specified" && exit 1
+npm run lint
 
 ## ✍️ Authors <a name = "contributing"></a>
-David. S
+David S. Sujith Ranjitkumar & Ben Stephens
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-None
+The entire awesome team.
 
 ### :copyright: License <a name = "license"></a>
 
@@ -113,6 +105,9 @@ None
 ## :question: Questions <a name = "<questions"></a>
 Questions, concers, comments ? 
 
-Please feel free to contact me at : https://ginganinjar.github.io/contact.html
+Please feel free to contact any of us : 
 
-Looking forward to hearing from you.
+David S at https://ginganinjar.github.io/contact.html
+Sujith Ranjitkumar at https://suji-gith.github.io/MBC-Portfolio-v2.0/index.html
+Ben Stephens at https://ben-j-st.github.io/updated-portfolio/contact.html
+
